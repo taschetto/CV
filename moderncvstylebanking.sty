@@ -10,7 +10,7 @@
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{moderncvstylebanking}[2013/02/09 v1.3.0 modern curriculum vitae and letter style scheme: banking]
+\ProvidesPackage{moderncvstylebanking}[2013/04/29 v1.5.1 modern curriculum vitae and letter style scheme: banking]
 
 
 %-------------------------------------------------------------------------------
@@ -38,7 +38,7 @@
 %\fi
 
 % symbols
-\moderncvicons{marvosym}
+\moderncvicons{awesome}
 
 % commands
 \newcommand*{\maketitlesymbol}{%
@@ -91,6 +91,8 @@
       \addtomaketitle{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
     \ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}%
     \ifthenelse{\isundefined{\@homepage}}{}{\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}%
+    \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
+      \addtomaketitle{\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%
     \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomaketitle{\@extrainfo}}%
     \flushmaketitle}\\[2.5em]}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \maketitle
 
