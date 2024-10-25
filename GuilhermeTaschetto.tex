@@ -4,63 +4,85 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}        % opções: tamanho da fonte ('10pt', '11pt', '12pt'), tamanho do papel ('a4paper', 'letterpaper', etc.), família de fontes ('sans', 'roman')
 
-% moderncv themes
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% temas moderncv
+\moderncvstyle{banking}                            % estilos: 'casual', 'classic', 'oldstyle', 'banking'
+\moderncvcolor{black}                              % cores: 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
 
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+% codificação de caracteres
+\usepackage[utf8]{inputenc}
 
-% adjust the page margins
-\usepackage[scale=0.9]{geometry}
+% ajustar margens da página
+\usepackage[scale=0.95]{geometry}
 
-% personal data
+% pacotes
+\usepackage{enumitem} % para customizar listas
+
+% dados pessoais
 \name{Guilherme}{Taschetto}
-\title{CV}                                        % optional, remove / comment the line if not wanted
-\address{Rua Brasil, 1375/505 B}{92310-150 Canoas}{RS} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+55~(51)~99288~3831}                % optional, remove / comment the line if not wanted
-\email{gtaschetto@gmail.com}                       % optional, remove / comment the line if not wanted
-\extrainfo{34 anos}                                % optional, remove / comment the line if not wanted
+\title{Engenheiro de Software}
+\address{Canoas, Brasil}{}{}
+\phone[mobile]{+55~(51)~99288~3831}
+\email{gtaschetto@gmail.com}
 \social[linkedin]{taschetto}
 \social[github]{taschetto}
 
 %----------------------------------------------------------------------------------
-%            content
+%            conteúdo
 %----------------------------------------------------------------------------------
 \begin{document}
 
 \makecvtitle
-\cvitem{}{Tenho como princípios a melhoria contínua, objetividade e consciência. Minha missão é entregar alto valor para meus clientes, de forma ágil, escalável e sustentável. Acredito que isto, aliado à relacionamentos sólidos e transparentes, são fatores imprescindíveis para o sucesso.}
 
-\section{Competências}
-\cvitem{Linguagens}{Ruby, JavaScript, Python, C, C++, Java, C\#, ASP.Net, Progress OpenEdge, HTML5, CSS3, SASS/LESS}
-\cvitem{Frameworks}{Ruby on Rails, React, Gatsby, Node.js}
-\cvitem{Plataformas}{AWS, Heroku, DigitalOcean, Linux, Windows}
-\cvitem{Outras}{Scrum, TDD, XP, SCM (Git, TFS), \LaTeX, Wordpress}
+\cvitem{}{Minha missão é entregar software de alta qualidade de forma competitiva, escalável e sustentável. Acredito que a melhoria contínua, a colaboração estreita com gerentes de produto e designers, e o compromisso com maturidade e trabalho em equipe são essenciais para alcançar os objetivos e entregar alto valor aos clientes, mantendo-se alinhado aos objetivos de negócio.}
 
-\section{Experiência Profissional}
-\cventry{2019--\the\year}{Gerente de Produtos Digitais}{Electric Consultoria}{Porto Alegre}{}{Desenvolvimento do eGrid, o sistema de gestão de energia criado pela Electric; elaboração de roadmap de produto e levantamento de requisitos; utilização diária de React e Ruby on Rails.}
-\cventry{2014--2018}{Líder técnico}{Fator 7 Tecnologia da Informação}{Porto Alegre}{}{Desenvolvimento de software ERP e sistemas especialistas em plataformas web e mobile; \textit{DevOps} em projetos externos e internos, responsável pela automação e monitoramento de sistemas e serviços; \textit{sysadmin} de \textit{cloud servers} (\textit{Heroku}, \textit{DigitalOcean}); participação em projetos como \textit{manager}, \textit{scrum master}, \textit{product owner} e desenvolvedor; líder da implantação e execução de processos internos da empresa, como \textit{inbound marketing} e recursos-humanos, sendo responsável pela captação, retenção e capacitação de talentos.}
-\cventry{2010--2014}{Desenvolvedor}{Elipse Software}{Porto Alegre}{}{Desenvolvimento de drivers em linguagem C++ (plataforma Windows) para comunicação, através de protocolos de controle e automação industrial, entre dispositivos e os produtos da Elipse.}
-\cventry{2008--2010}{Engenheiro de Suporte}{Elipse Software}{Porto Alegre}{}{Suporte técnico e ministração de treinamentos sobre os produtos da Elipse; Quality Assurance junto a projetos de automação industrial de clientes; desenvolvimento de produtos e soluções customizadas.}
-\cventry{2003--2008}{Desenvolvedor}{Datasul (atual TOTVS)}{Porto Alegre}{}{Desenvolvimento de software ERP customizado para clientes em linguagem Progress OpenEdge para plataforma Windows e web (com HTML, CSS e JavaScript); modelagem conceitual e relacional de esquemas de bancos de dados; análise de negócios; elaboração de documentação técnica e engenharia de software; desenvolvimento de sistemas internos da empresa.}
-
-\section{Formação}
-\cventry{2017}{SAP ABAP Academy}{Fountoura Education}{Porto Alegre}{Extracurricular}{100 h}
-\cventry{2016}{Olá Mundo Ágil, Histórias de Usuário, Descobrindo Produtos Viáveis}{Wildtech}{Porto Alegre}{Extracurricular}{24 h}
-\cventry{2016}{}{Wildtech}{Porto Alegre}{Extracurricular}{24 h}
-\cventry{2012--2016}{Ciência da Computação}{PUCRS}{Porto Alegre}{Graduação}{}
-\cventry{2004--2009}{Engenharia Elétrica}{PUCRS}{Porto Alegre}{Graduação}{}
-\cventry{2000--2003}{Processamento de Dados}{Escola Técnica Santo Inácio}{Porto Alegre}{Técnico}{}
-
-\section{Formação Extracurricular}
-\cventry{2017}{SAP ABAP Academy}{Fountoura Education}{Porto Alegre}{Extracurricular}{100 h}
+\section{Habilidades}
+\cvitem{Linguagens de Programação}{Ruby, JavaScript, TypeScript, C, C++, C\#, Python, Java, Progress/OpenEdge}
+\cvitem{Desenvolvimento Web}{Ruby on Rails, Node.js, React, Material UI, Vite}
+\cvitem{Cloud e DevOps}{AWS (Lambda, S3, CDK, SQS, CloudFront, API Gateway, CloudFormation, ACM, Route 53), Heroku, CI/CD, Infraestrutura como Código}
+\cvitem{Outros}{Desenvolvimento orientado a testes, Feature flags (LaunchDarkly), Metodologias Ágeis (Scrum, Kanban), Git}
 
 \section{Idiomas}
+\cvitemwithcomment{Inglês}{Fluente}{}
 \cvitemwithcomment{Português}{Nativo}{}
-\cvitemwithcomment{Inglês}{Avançado}{Lê, escreve, fala e entende bem.}
-\cvitemwithcomment{Alemão}{Básico}{Lê, escreve, fala e entende pouco.}
+
+\section{Experiência Profissional}
+\cventry{2020--\the\year}{Engenheiro de Software Sênior}{Tatango}{Remoto}{}{
+Na Tatango, utilizei um stack que incluía Ruby on Rails, TypeScript, React e Node.js para projetar e implementar funcionalidades tanto no front-end quanto no back-end. Como Tech Lead, fui responsável pela arquitetura da aplicação, utilizando serviços da AWS como CloudFront, API Gateway, Lambda, SQS e DynamoDB para entregar funcionalidades. Minhas principais realizações incluem:
+\begin{itemize}[leftmargin=2em]
+    \item Implementação de um pipeline de processamento baseado em Lambda para lidar com milhões de mensagens em um curto período, aumentando significativamente a capacidade do sistema.
+    \item Criação de um sistema personalizado de encurtamento de URLs capaz de processar picos súbitos de milhões de redirecionamentos para acomodar o tráfego gerado por campanhas massivas de SMS/MMS.
+    \item Otimização do processo de desenvolvimento ao introduzir feature flags, resultando em pull requests menores e ciclos de desenvolvimento mais rápidos.
+    \item Liderança na melhoria do pipeline de deploy, passando de deployments quinzenais para várias vezes por dia, acelerando o tempo de entrega.
+    \item Desenvolvimento de uma ferramenta interna de linha de comando para automatizar tarefas diárias, aumentando a eficiência da equipe de desenvolvimento.
+\end{itemize}
+}
+
+\cventry{2018--2020}{Engenheiro de Software Sênior}{eGrid}{Porto Alegre}{}{
+Na eGrid, liderei o desenvolvimento de um sistema de gestão de energia elétrica, supervisionando a concepção do produto, design e implementação. Minhas responsabilidades incluíram a criação de protótipos, definição de requisitos de usuário e garantia de alta disponibilidade e desempenho. O stack tecnológico incluía Ruby on Rails, TypeScript, React, PostgreSQL e Redis, com infraestrutura em Heroku e AWS. Principais realizações incluem:
+\begin{itemize}[leftmargin=2em]
+    \item Desenvolvimento de um engine de cálculo flexível para auditoria de faturas de energia elétrica, capaz de processar faturas de todos os 27 estados brasileiros.
+    \item Parceria com gerentes de produto para criar relatórios detalhados e ricos em informações para usuários em diversos níveis hierárquicos, melhorando a apresentação de dados e a tomada de decisões.
+    \item Integração de múltiplas fontes de dados como o comitê do mercado livre de energia do Brasil, aprimorando a interoperabilidade e confiabilidade do sistema.
+    \item Implementação de algoritmos de OCR usando AWS Lambda para automatizar a extração de dados de arquivos PDF, reduzindo significativamente a entrada manual de dados.
+\end{itemize}
+}
+
+\cventry{2014--2018}{Engenheiro de Software Sênior}{Fator 7}{Porto Alegre}{}{
+Desenvolvimento de sistemas ERP usando Ruby on Rails e Progress/OpenEdge.
+}
+
+\cventry{2009--2014}{Engenheiro de Software}{Elipse Software}{Porto Alegre}{}{
+Desenvolvimento de drivers de comunicação para protocolos industriais e sistemas de aquisição de dados usando C++ e C\#. Utilização de ferramentas como Microsoft Visual Studio e Team Foundation Server.
+}
+
+\cventry{2003--2008}{Engenheiro de Software}{TOTVS (anteriormente Datasul)}{Porto Alegre}{}{
+Desenvolvimento de soluções ERP personalizadas usando Progress/OpenEdge, XHTML, CSS, JavaScript e Ajax. Responsável pelo design de banco de dados, documentação de software e desenvolvimento de soluções corporativas para internet/intranet.
+}
+
+\section{Formação Acadêmica}
+\cventry{2012--2016}{Bacharelado em Ciência da Computação}{PUCRS}{Porto Alegre}{}{}
+\cventry{2004--2009}{Bacharelado em Engenharia Elétrica}{PUCRS}{Porto Alegre}{}{}
 
 \end{document}

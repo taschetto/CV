@@ -4,25 +4,27 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}        % options: font size ('10pt', '11pt', '12pt'), paper size ('a4paper', 'letterpaper', etc.), font family ('sans', 'roman')
 
 % moderncv themes
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{banking}                            % styles: 'casual', 'classic', 'oldstyle', 'banking'
+\moderncvcolor{black}                              % colors: 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}
 
 % adjust the page margins
 \usepackage[scale=0.95]{geometry}
 
+% packages
+\usepackage{enumitem} % for customizing lists
 
 % personal data
 \name{Guilherme}{Taschetto}
-\title{CV}                                        % optional, remove / comment the line if not wanted
-\address{Canoas}{}{Brazil} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+55~(51)~99288~3831}                % optional, remove / comment the line if not wanted
-\email{gtaschetto@gmail.com}                       % optional, remove / comment the line if not wanted
+\title{Software Engineer}
+\address{Canoas, Brazil}{}{}
+\phone[mobile]{+55~(51)~99288~3831}
+\email{gtaschetto@gmail.com}
 \social[linkedin]{taschetto}
 \social[github]{taschetto}
 
@@ -32,16 +34,14 @@
 \begin{document}
 
 \makecvtitle
-\cvitem{}{My mission is to deliver quality software in a competitive, scalable, and sustainable way. I believe that continuous improvement, close collaboration with product managers and designers, and a commitment to maturity and teamwork are key factors in achieving our goals and delivering high value to the customer, always aligned with business objectives.}
 
-Help me introduce the idea of working along product managers and designers into my mission
+\cvitem{}{My mission is to deliver high-quality software in a competitive, scalable, and sustainable way. I believe that continuous improvement, close collaboration with product managers and designers, and a commitment to maturity and teamwork are essential to achieving goals and delivering high value to customers, while staying aligned with business objectives.}
 
 \section{Skills}
 \cvitem{Programming Languages}{Ruby, JavaScript, TypeScript, C, C++, C\#, Python, Java, Progress/OpenEdge}
 \cvitem{Web Development}{Ruby on Rails, Node.js, React, Material UI, Vite}
-\cvitem{AWS}{Lambda, S3, CDK, SQS, CloudFront, API Gateway, CloudFormation, ACM, Route53}
-\cvitem{Other}{Heroku, Test-driven development, CI workflows, feature flags (LaunchDarkly), Agile, Git}
-
+\cvitem{Cloud and DevOps}{AWS (Lambda, S3, CDK, SQS, CloudFront, API Gateway, CloudFormation, ACM, Route 53), Heroku, CI/CD, Infrastructure as Code}
+\cvitem{Other}{Test-driven development, Feature flags (LaunchDarkly), Agile (Scrum, Kanban), Git}
 
 \section{Languages}
 \cvitemwithcomment{English}{Fluent}{}
@@ -49,23 +49,41 @@ Help me introduce the idea of working along product managers and designers into 
 
 \section{Professional Background}
 \cventry{2020--\the\year}{Senior Software Engineer}{Tatango}{Remote}{}{
-At Tatango, I leveraged a robust tech stack that included Ruby on Rails, TypeScript, React, and Node.js to design and implement features across both front-end and back-end systems. As a Tech Lead, I played a key role in cloud architecture, utilizing AWS services such as S3, CloudFront, API Gateway, DynamoDB, and CDK to deliver scalable features and infrastructure. Among many accomplishments, I can highlight:
-\begin{itemize}
-    \setlength\itemindent{2em}
-    \item Implemented a Lambda-based processing pipeline capable of handling millions of messages in a short timespan, significantly improving system throughput and efficiency.
-    \item Implemented a custom URL shortening system able to handle sudden bursts of millions of redirections
-    \item Streamlined the development process by introducing feature flags into the codebase, resulting in smaller pull requests and drastically improving the development cycle time.
-    \item Spearheaded improvements to the deployment pipeline, enabling the team to shift from bi-weekly deployments to multiple daily releases, greatly enhancing deployment speed and reducing time-to-market.
-    \item Created an internal CLI tool to automate everyday tasks, increasing efficiency for the development team.
+At Tatango, I leveraged a robust tech stack that included Ruby on Rails, TypeScript, React, and Node.js to design and implement features across front-end and back-end systems. As a Tech Lead, I was responsible for cloud architecture, utilizing AWS services such as CloudFront, API Gateway, Lambda, SQS and DynamoDB to deliver scalable features and infrastructure. Key accomplishments include:
+\begin{itemize}[leftmargin=2em]
+    \item Implemented a Lambda-based processing pipeline to handle millions of messages in a short timespan, significantly boosting system throughput.
+    \item Implemented a custom URL shortening system capable of processing sudden bursts of millions of redirections to accomodate traffic generated by mass SMS/MMS campaigns.
+    \item Streamlined the development process by introducing feature flags, resulting in smaller pull requests and faster development cycles.
+    \item Led improvements to the deployment pipeline, transitioning from bi-weekly deployments to multiple daily releases, enhancing deployment speed and reducing time-to-market.
+    \item Built an internal CLI tool to automate everyday tasks, increasing development team efficiency.
 \end{itemize}
 }
-\cventry{2018--2020}{Senior Software Engineer}{eGrid}{Porto Alegre}{}{At eGrid, I played a key role in the development of an energy management system, leading efforts in design, modeling, and product development. I was responsible for creating prototypes, wireframes, and defining user requirements, while also ensuring the system’s high availability and performance. I implemented automation techniques to streamline system provisioning, deployment, and operations, leveraging infrastructure-as-code practices with AWS CloudFormation and automating workflows for efficient deployment. The tech stack included Ruby on Rails, TypeScript, React, Node.js, PostgreSQL, and Redis, while the infrastructure utilized Heroku and AWS services like S3, Lambda, CloudFront, and API Gateway.}
-\cventry{2014--2018}{Senior Software Engineer}{Fator 7}{Porto Alegre}{}{I worked as a software engineer, specializing in developing enterprise systems based on Ruby on Rails and OpenEdge.}
-\cventry{2009--2014}{Software Engineer}{Elipse Software}{Porto Alegre}{}{During my time as a software engineer at Elipse, I worked on developing communication drivers for industrial protocols and data acquisition systems using C++ and C\#. I utilized tools such as Microsoft Visual Studio, Microsoft Team Foundation Server, and FogBugz on a daily basis to help manage and track project progress.}
-\cventry{2003--2008}{Software Engineer}{TOTVS (formerly Datasul)}{Porto Alegre}{}{Developed custom ERP software for several clients using Progress/OpenEdge for Windows and web (with XHTML, CSS, JavaScript and Ajax); conceptual and relational database schema design; elaborated software engineering artifacts and documentation; internet/intranet corporate solutions design and development.}
+
+\cventry{2018--2020}{Senior Software Engineer}{eGrid}{Porto Alegre}{}{
+At eGrid, I led the development of an electrical energy management system, overseeing product inception, design, and implementation. My responsibilities included creating prototypes, defining user requirements, and ensuring high availability and performance. The tech stack featured Ruby on Rails, TypeScript, React, PostgreSQL, and Redis, with infrastructure on Heroku and AWS. Key accomplishments include:
+\begin{itemize}[leftmargin=2em]
+    \item Developed a flexible calculation engine for electric bill audits, capable of processing bills from all 27 Brazilian states.
+    \item Partnered with product managers to create detailed, information-rich reports for users at various hierarchical levels, improving data presentation and decision-making.
+    \item Integrated multiple data sources with the Brazilian free-energy market committee, enhancing the system's interoperability and reliability.
+    \item Implemented OCR algorithms using AWS Lambda to automate data extraction from PDF files, significantly reducing manual data entry.
+\end{itemize}
+}
+
+
+\cventry{2014--2018}{Senior Software Engineer}{Fator 7}{Porto Alegre}{}{
+Developed ERP systems using Ruby on Rails and Progress/OpenEdge.
+}
+
+\cventry{2009--2014}{Software Engineer}{Elipse Software}{Porto Alegre}{}{
+Developed communication drivers for industrial protocols and data acquisition systems using C++ and C\#. Utilized tools such as Microsoft Visual Studio and Team Foundation Server.
+}
+
+\cventry{2003--2008}{Software Engineer}{TOTVS (formerly Datasul)}{Porto Alegre}{}{
+Developed custom ERP solutions using Progress/OpenEdge, XHTML, CSS, JavaScript, and Ajax. Responsibilities included database design, software documentation, and corporate web solutions development.
+}
 
 \section{Academic Background}
-\cventry{2012--2016}{Computer Science}{PUCRS}{Porto Alegre}{B.Sc.}{}
-\cventry{2004--2009}{Electrical Engineering}{PUCRS}{Porto Alegre}{B.Sc.}{}
+\cventry{2012--2016}{B.Sc. in Computer Science}{PUCRS}{Porto Alegre}{}{}
+\cventry{2004--2009}{B.Sc. in Electrical Engineering}{PUCRS}{Porto Alegre}{}{}
 
 \end{document}
